@@ -4,6 +4,8 @@ go 1.18
 
 require golang.org/x/exp v0.0.0-20220722155223-a9213eeb770e
 
+require github.com/emersion/go-autostart v0.0.0-20210130080809-00ed301c8e9a // indirect
+
 require (
 	github.com/gen2brain/beeep v0.0.0-20220518085355-d7852edf42fc // indirect
 	github.com/go-toast/toast v0.0.0-20190211030409-01e6764cf0a4 // indirect

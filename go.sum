@@ -1,3 +1,5 @@
+github.com/emersion/go-autostart v0.0.0-20210130080809-00ed301c8e9a h1:M88ob4TyDnEqNuL3PgsE/p3bDujfspnulR+0dQWNYZs=
+github.com/emersion/go-autostart v0.0.0-20210130080809-00ed301c8e9a/go.mod h1:buzQsO8HHkZX2Q45fdfGH1xejPjuDQaXH8btcYMFzPM=
 github.com/gen2brain/beeep v0.0.0-20220518085355-d7852edf42fc h1:6ZZLxG+lB+Qbg+chtzAEeetwqjlPnY0BXbhL3lQWYOg=
 github.com/gen2brain/beeep v0.0.0-20220518085355-d7852edf42fc/go.mod h1:/WeFVhhxMOGypVKS0w8DUJxUBbHypnWkUVnW7p5c9Pw=
 github.com/go-toast/toast v0.0.0-20190211030409-01e6764cf0a4 h1:qZNfIGkIANxGv/OqtnntR4DfOY2+BgwR60cAcu/i3SE=

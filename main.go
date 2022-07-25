@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "embed"
 	"flag"
 	"fmt"
 	"io/fs"
@@ -27,23 +28,23 @@ type Arrange struct {
 var stuff = []Arrange{
 	{
 		Folder:     "videos",
-		Extensions: []string{"mp4", "avi,", "mkv", "webm"},
+		Extensions: []string{"mp4", "avi,", "mkv", "webm", "flv", "mov", "m4v", "3gp", "3g2"},
 	},
 	{
 		Folder:     "images",
-		Extensions: []string{"jpg", "jpeg", "png", "gif", "webp"},
+		Extensions: []string{"jpg", "jpeg", "png", "gif", "webp", "bmp"},
 	},
 	{
 		Folder:     "vectors",
-		Extensions: []string{"svg"},
+		Extensions: []string{"svg", "ai", "eps", "psd"},
 	},
 	{
 		Folder:     "musics",
-		Extensions: []string{"mp3", "wav", "oob"},
+		Extensions: []string{"mp3", "wav", "ogg", "ogv", "flac", "aac", "wma", "m4a"},
 	},
 	{
 		Folder:     "documents",
-		Extensions: []string{"pdf", "odt", "txt", "doc", "docx"},
+		Extensions: []string{"pdf", "odt", "txt", "doc", "docx", "csv"},
 	},
 	{
 		Folder:     "applications",
@@ -51,18 +52,26 @@ var stuff = []Arrange{
 	},
 	{
 		Folder:     "archieves",
-		Extensions: []string{"zip", "xz", "gz"},
+		Extensions: []string{"zip", "xz", "gz", "rar", "7z", "apk", "rpm", "tar", "tgz"},
 	},
 	{
 		Folder:     "debs",
 		Extensions: []string{"deb", "sh"},
 	},
+	{
+		Folder:     "fonts",
+		Extensions: []string{"ttf", "otf", "woff", "woff2", "eot"},
+	},
 }
 
 func main() {
+
 	if runtime.GOOS == "windows" {
 		panic("We currently don't support windows at the moment!")
 	}
+
+	// auto starts this application
+	go AutoStart()
 
 	//	get users home dir
 	homedir, err := os.UserHomeDir()

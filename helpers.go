@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "embed"
 	"log"
 
 	"github.com/gen2brain/beeep"
@@ -11,12 +12,9 @@ func NotifySys(t, msg string) {
 	if t == "" {
 		t = "Arrange Notifier"
 	}
-
-	if err := beeep.Notify(t, msg, "./assets/information.png"); err != nil {
+	if err := beeep.Notify(t, msg, "assets/information.png"); err != nil {
 		handleErr(err)
 	}
-
-	log.Println("Beeped!")
 }
 
 func Contains[T comparable](s []T, e T) bool {
